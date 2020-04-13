@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	localtime_s(&timeinfo, &rawtime);
 	char filename[MAX_PATH];
 	char filepath[MAX_PATH];
-	strftime(filename, 100, "%Y-%m-%d_%H-%M-%S", &timeinfo);
+	strftime(filename, 100, "system.log", &timeinfo);
 	sprintf_s(filepath, "%s\\%s%s", basepath.c_str(), filename, FILEEXT);
 
 	string lastTitle = "";
